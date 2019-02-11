@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <ManifestDocuments>
+    <ManifestDocument>obj\\Debug\MonoAndroid4487\lp\3\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Debug\MonoAndroid4487\lp\5\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Debug\MonoAndroid4487\lp\6\jl\AndroidManifest.xml</ManifestDocument>
+  </ManifestDocuments>
+  <NativeLibraries />
+  <Jars>
+    <Jar>obj\\Debug\MonoAndroid4487\lp\1\jl\formsviewgroup.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid4487\lp\3\jl\bin\classes.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid4487\lp\5\jl\bin\classes.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid4487\lp\6\jl\bin\classes.jar</Jar>
+  </Jars>
+</Paths>

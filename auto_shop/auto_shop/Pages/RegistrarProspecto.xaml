@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="auto_shop.Pages.RegistrarProspecto">
+    <ContentPage.Content>
+        
+        <Grid>
+            <Image Source="fondo_app.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#EBEBEB" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#EBEBEB">
+                    <Label Text="Resgistro Prospectos" 
+                            HorizontalOptions="CenterAndExpand" 
+                            VerticalOptions="CenterAndExpand" 
+                            Font="30"
+                            TextColor="#474747"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="spflogo.png" WidthRequest="90" HeightRequest="60" Margin="0,0,15,0"/>
+                    </StackLayout>
+                </StackLayout>
+                <ScrollView Grid.Row="1">
+                    <StackLayout Padding="30,20" VerticalOptions="Center">
+                        <Label TextColor="#474747"
+                               Text="Autorizo a LA MARCA para:"
+                               FontAttributes="Bold"/>
+                        <Label TextColor="#474747"
+                               Text="a) Recolectar, almacenar, utilizar, circular o suprimir los datos suministrados por mí, con la finalidad de enviarme comunicaciones corporativas, incluidos correos electrónicos, llamadas telefónicas y mensajes de texto, relacionados con ofertas especiales, noticias, eventos y actualizaciones de productos de MARCA y su red de Concesionarios."/>
+                        <Label TextColor="#474747"
+                               Text="b) Que mis datos personales sean administrados y tratados a través de los sistemas de información de LA MARCA y transferidos a terceros con el fin exclusivo de cumplir con lo estipulado en el inciso anterior."/>
+                        <Label TextColor="#474747"
+                               Margin="0,0,0,15"
+                               Text="c) Reconozco que LA MARCA me ha notificado mis derechos referentes a la posibilidad de solicitar conocer, actualizar y rectificar mis datos personales; solicitar prueba de la presente autorización; revocar mi consentimiento para el tratamiento de mis datos en cualquier momento; solicitar la supresión y acceder a mis datos personales. Finalmente, reconozco que puedo ejercer mis derechos relacionados con la Ley de Protección de Datos Personales ante la Superintendencia de Industria y Comercio."/>
+                        <Label TextColor="#474747"
+                               Text="Autoriza?"
+                               FontAttributes="Bold"
+                               HorizontalOptions="CenterAndExpand"/>
+                        <Switch x:Name="radio_habeas"
+                                HorizontalOptions="CenterAndExpand"/>
+                        <Label TextColor="#474747"
+                            Text="Datos Personales:"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Margin="0, 0, 0, 25"/>
+                    <Entry x:Name="txt_nombre" 
+                            Placeholder="Nombre"
+                            PlaceholderColor="#474747"
+                            TextColor="#474747"
+                            Keyboard="Text"/>
+                    <Entry x:Name="txt_apellido" 
+                            PlaceholderColor="#474747"
+                            TextColor="#474747"
+                            Placeholder="Apellido"
+                            Keyboard="Text"/>
+                    <Entry x:Name="txt_correo" 
+                            PlaceholderColor="#474747"
+                            TextColor="#474747"
+                            Placeholder="Correo electronico"
+                            Keyboard="Email"/>
+                    <Entry x:Name="txt_celular" 
+                            PlaceholderColor="#474747"
+                            TextColor="#474747"
+                            Placeholder="Telefono Celular"
+                            Keyboard="Telephone"/>
+                    <Picker x:Name="txt_ciudad" TextColor="#474747" SelectedIndexChanged="txt_ciudad_SelectedIndexChanged">
+                        <Picker.Items>
+                                <x:String>Ciudad</x:String>
+                                <x:String>Bogotá</x:String>
+                                <x:String>Chia</x:String>
+                                <x:String>Cota</x:String>
+                                <x:String>Funza</x:String>
+                                <x:String>Mosquera</x:String>
+                                <x:String>Soacha</x:String>
+                                <x:String>Medellín</x:String>
+                                <x:String>Cali</x:String>
+                                <x:String>Cartagena</x:String>
+                                <x:String>Barranquilla</x:String>
+                                <x:String>Tunja</x:String>
+                                <x:String>Manizales</x:String>
+                                <x:String>Neiva</x:String>
+                                <x:String>Villavicencio</x:String>
+                                <x:String>Bucaramanga</x:String>
+                                <x:String>Pasto</x:String>
+                                <x:String>Otra</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Entry x:Name="txt_otra_ciudad" 
+                            PlaceholderColor="#474747"
+                            TextColor="#474747"
+                            Placeholder="Cual?"
+                            Keyboard="Text"
+                           IsVisible="False"/> 
+                    <Picker x:Name="txt_genero" TextColor="#474747">
+                        <Picker.Items>
+                            <x:String>Genero</x:String>
+                            <x:String>Hombre</x:String>
+                            <x:String>Mujer</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Picker x:Name="txt_edad" TextColor="#474747">
+                        <Picker.Items>
+                            <x:String>Edad</x:String>
+                            <x:String>18 - 35</x:String>
+                            <x:String>36 - 50</x:String>
+                            <x:String>mayor de 50</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label TextColor="#474747"
+                            Text="Datos del vehículo:"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Margin="0, 25, 0, 25"/>
+                    <Picker x:Name="txt_marca"
+                            Title="Marca"
+                            TextColor="#474747" 
+                            SelectedIndexChanged="txt_marca_SelectedIndexChanged"
+                            ItemDisplayBinding="{Binding descripcion}">
+                        
+                    </Picker>
+                    <Picker x:Name="txt_modelo" 
+                            TextColor="#474747"
+                            Title="Modelo"
+                            SelectedIndexChanged="txt_modelo_SelectedIndexChanged"
+                            ItemDisplayBinding="{Binding descripcion}">
+                        
+                    </Picker>
+                    <Picker x:Name="txt_version" 
+                            TextColor="#474747"
+                            Title="Version"
+                            SelectedIndexChanged="txt_version_SelectedIndexChanged"
+                            ItemDisplayBinding="{Binding descripcion}">
+                        
+                    </Picker>
+                    <Picker x:Name="txt_detalle" 
+                            TextColor="#474747"
+                            Title="Detalle"
+                            ItemDisplayBinding="{Binding detalleMostrar}">
+                        
+                    </Picker>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="Start" HorizontalTextAlignment="Start"
+                               TextColor="#474747" FontSize="Medium">Desea realizar financiación?</Label>
+                        <Switch x:Name="radio_financiacion"
+                                HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="Start" HorizontalTextAlignment="Start"
+                               TextColor="#474747" FontSize="Medium" >Realiza pedido?</Label>
+                        <Switch x:Name="radio_pedido"
+                                HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="Start" HorizontalTextAlignment="Start"
+                               TextColor="#474747" FontSize="Medium" >Enviar Cotización?</Label>
+                        <Switch x:Name="radio_cotizacion"
+                                HorizontalOptions="EndAndExpand"
+                                Toggled="radio_cotizacion_Toggled"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="Start" HorizontalTextAlignment="Start"
+                               TextColor="#474747" FontSize="Medium" >Enviar ficha tecnica?</Label>
+                        <Switch x:Name="radio_ficha"
+                                HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Picker x:Name="txt_asesor" 
+                            TextColor="#474747"
+                            Title="Asesor"
+                            ItemDisplayBinding="{Binding nombreusuario}">
+                        
+                    </Picker>
+                    <Picker x:Name="txt_razon" TextColor="#474747">
+                        <Picker.Items>
+                            <x:String>Razón de no compra</x:String>
+                                <x:String>Precio</x:String>
+                                <x:String>Disponibilidad / Tiempo de entrega</x:String>
+                                <x:String>Productos / Equipamiento</x:String>
+                                <x:String>Financiación</x:String>
+                                <x:String>Retoma</x:String>
+                                <x:String>Compro a la competencia</x:String>
+                                <x:String>Pospone Decisión</x:String>
+                            </Picker.Items>
+                    </Picker>
+                        <Button x:Name="btn_registrar"
+                            Text="Registrar"
+                            BackgroundColor="White" 
+                            BorderRadius="15" 
+                            TextColor="#0C67C2"
+                            HorizontalOptions="EndAndExpand"
+                            Clicked="btn_registrar_Clicked"/>
+                </StackLayout>
+                </ScrollView>
+            </Grid>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

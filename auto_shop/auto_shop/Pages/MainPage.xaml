@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:auto_shop"
+             x:Class="auto_shop.MainPage">
+
+    <Grid>
+        <Image Source="fondo_app.jpg" Aspect="AspectFill"/>
+        <BoxView Color="#EBEBEB" Opacity="0.8"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#EBEBEB">
+                <Label x:Name="txt_nombreusuario" 
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand" 
+                       Font="20"
+                       TextColor="#0C67C2"/>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="spflogo.png" WidthRequest="90" HeightRequest="60" Margin="0,0,15,0"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Padding="30,20" Grid.Row="1" VerticalOptions="Center">
+                <Button Text="Registrar Prospectos" 
+                        x:Name="btn_registrar" 
+                        BackgroundColor="White" 
+                        BorderRadius="15" 
+                        TextColor="#0C67C2"
+                        VerticalOptions="Center"
+                        Clicked="btn_registrar_Clicked"/>
+                <Button Text="Prospectos Asignados" 
+                        x:Name="btn_prospectos_asignados" 
+                        BackgroundColor="White" 
+                        BorderRadius="15" 
+                        TextColor="#0C67C2"
+                        VerticalOptions="Center"
+                        Clicked="btn_prospectos_asignados_Clicked"/>
+                <Button Text="Sincronizar Prospectos" 
+                        x:Name="btn_listar_prospecto" 
+                        BackgroundColor="White" 
+                        BorderRadius="15" 
+                        TextColor="#0C67C2"
+                        VerticalOptions="Center"
+                        Clicked="btn_listar_prospecto_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+</ContentPage>

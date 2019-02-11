@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="auto_shop.Pages.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="fondo_app.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#EBEBEB" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#EBEBEB">
+                    <Label Text="V1.1" FontSize="Micro" TextColor="#0C67C2" HorizontalOptions="Start"/>
+                    <Image Source="spflogo.png" WidthRequest="90" HeightRequest="60" Margin="0,0,15,0"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Padding="30,20" VerticalOptions="CenterAndExpand">
+                    <Entry Placeholder="Usuario" PlaceholderColor="Gray" x:Name="txt_usuario" TextColor="#474747" Keyboard="Email"/>
+                    <Entry Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True" x:Name="txt_password" TextColor="#474747"/>
+                    <ActivityIndicator x:Name="wait_respuesta"/>
+                    <Button Text="Iniciar Sesión" 
+                        x:Name="btn_login"
+                        HorizontalOptions="Center"
+                        BackgroundColor="White" 
+                        BorderRadius="15" 
+                        TextColor="#0C67C2" 
+                        Clicked="btn_login_Clicked"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="¿Recuperar Contraseña?" TextColor="#0C67C2" FontAttributes="Bold"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

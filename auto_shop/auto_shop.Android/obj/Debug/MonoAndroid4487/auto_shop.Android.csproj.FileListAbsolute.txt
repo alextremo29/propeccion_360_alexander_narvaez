@@ -1,0 +1,2 @@
+C:\Users\alexn\source\repos\auto_shop\auto_shop\auto_shop.Android\obj\Debug\MonoAndroid4487\auto_shop.Android.csprojAssemblyReference.cache
+C:\Users\alexn\source\repos\auto_shop\auto_shop\auto_shop.Android\obj\Debug\MonoAndroid4487\res.flag

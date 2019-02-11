@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="auto_shop.Pages.BrowserProspectosAsig">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="fondo_app.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#EBEBEB" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#EBEBEB">
+                    <Label Text="Prospectos Asignados" 
+                        HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="CenterAndExpand" 
+                        Font="30"
+                        TextColor="#474747"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="spflogo.png" WidthRequest="90" HeightRequest="60" Margin="0,0,15,0"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Padding="30,20" VerticalOptions="Center" Grid.Row="1">
+                    <StackLayout>
+                        <ActivityIndicator x:Name="wait_respuesta"/>
+                        <Label TextColor="#474747"
+                                Text="Nota:"
+                                FontAttributes="Bold"/>
+                        <Label TextColor="#474747"
+                                Text="La siguiente información corresponde a los prospectos registrados en su tablet y asignados por un anfitrion."
+                                Margin="0,0,0,15"/>
+                    </StackLayout>
+                    <StackLayout Margin="0,0,0,15">
+                        <!--<SearchBar TextChanged="SearchBar_TextChanged" Placeholder="Nombre Prospecto"></SearchBar>-->
+                        <Entry TextChanged="SearchBar_TextChanged" Placeholder="Nombre Prospecto"></Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Nombre/correo" 
+                               FontAttributes="Bold"
+                               FontSize="20"
+                               HorizontalTextAlignment="Start"
+                               HorizontalOptions="FillAndExpand"
+                               TextColor="#0C67C2"/>
+                        <Label Text="Teléfono"
+                               HorizontalTextAlignment="End"
+                               HorizontalOptions="End"
+                               FontAttributes="Bold"
+                               FontSize="20"
+                               TextColor="#0C67C2"/>
+                        
+                    </StackLayout>
+                    <ScrollView>
+                        <ListView x:Name="ListaProspectosAsig" HasUnevenRows="True" ItemSelected="ListaProspectosAsig_ItemSelected">
+
+                        </ListView>
+                    </ScrollView>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
